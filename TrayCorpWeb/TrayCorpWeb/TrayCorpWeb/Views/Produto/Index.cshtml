@@ -1,0 +1,67 @@
+﻿@model IEnumerable<TrayCorpWeb.Models.Produto>
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+
+<h2>Lista de Produtos</h2>
+<hr />
+
+<p>
+    <button onclick="location.href='@Url.Action("Create", "Produto")'" class="btn btn-success glyphicon glyphicon-plus">Novo</button>
+</p>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row form-group">
+        <div class="col-md-4">
+            @Html.DropDownList("campoPesquisa", null, htmlAttributes: new { @class = "form-control" })
+        </div>
+        <div class="col-md-7">
+            @Html.TextBox("valorPesquisa", null, htmlAttributes: new { @class = "form-control", placeholder = "digite o texto" })
+        </div>
+        <div class="col-md-1" style="text-align:right; margin-left:-20px">
+            <input type="submit" value="Pesquisar" class="btn btn-primary" />
+        </div>
+        
+    </div>
+}
+<table style="width:100%" class="table table-bordered table-striped table-hover">
+    <thead>
+    <tr>
+        <th style="width:15%">
+            <a asp-action="Index" asp-route-ordenarPor="Nome">@Html.DisplayName("Nome")</a>
+        </th>
+        <th style="width:30%">
+            <a asp-action="Index" asp-route-ordenarPor="Estoque">@Html.DisplayName("Estoque")</a>
+        </th>
+        <th style="width:1%">
+            <a asp-action="Index" asp-route-ordenarPor="Valor">@Html.DisplayName("Valor")</a>
+        </th>
+        <th style="width:25%">
+
+        </th>
+    </tr>
+</thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estoque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelitem => item.Valor)
+            </td>
+            <td>
+                @Html.ActionLink("Alterar", "Edit", new { id = item.IdProduto }) |
+                @Html.ActionLink("Vizualizar", "Details", new { id = item.IdProduto }) |
+                @Html.ActionLink("Exluir", "Delete", new { id = item.IdProduto }) |
+            </td>
+        </tr>
+    }
+
+</table>
+

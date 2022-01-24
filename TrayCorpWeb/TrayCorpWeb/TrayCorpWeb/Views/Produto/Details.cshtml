@@ -1,0 +1,50 @@
+﻿@model TrayCorpWeb.Models.Produto
+
+<h2>Visualizar Produto </h2>
+<hr />
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IdProduto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdProduto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estoque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estoque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Voltar" class="btn btn-secondary" formaction="@Url.Action("Index","Produto")" />
+    @Html.ActionLink("Alterar", "Edit", new { Id = Model.IdProduto }, new { @class = "btn btn-primary" })
+</div>
+    }
+</div>
