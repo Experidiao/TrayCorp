@@ -1,5 +1,5 @@
 # Sobre o projeto TrayCorp
-Neste projeto esta contido duas parte, back-end e Front-end.
+Neste projeto esta contido duas parte, back-end e Front-end. Todo o CRUD fo testado juntamente com todas as listagem dos produtos.
 
 ## Ferramenta utilizada
 Visual studio 2022
@@ -9,4 +9,11 @@ Aplicatiov Web do Asp.Net Core (Model-View-Controller) (.net 5.0)
 
 ## Back-End
 API Web do Asp.Net Core (.net 5.0)
+
+## SGDB
+Sql-Server (2018)
+
+
+
+
 
