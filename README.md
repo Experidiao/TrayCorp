@@ -1,1 +1,12 @@
-# TrayCorp
+# Sobre o projeto TrayCorp
+Neste projeto esta contido duas parte, back-end e Front-end.
+
+## Ferramenta utilizada
+Visual studio 2022
+
+## Front-End
+Aplicatiov Web do Asp.Net Core (Model-View-Controller) (.net 5.0)
+
+## Back-End
+API Web do Asp.Net Core (.net 5.0)
+
