@@ -22,9 +22,10 @@ Este é um front-End simples para cadastro de produto. Tendo todas as funcionali
 
 - Controler
   - Index
-     - Visualizar um produto especifico
-     - Ordenar os produto por diferentes campos
-     - Buscar o produto pelo nome
+    - Todos fazendo a chamada da Api
+      - Visualizar um produto especifico
+      - Ordenar os produto por diferentes campos
+      - Buscar o produto pelo nome
      
  - Incluir/Excluir/Alterar
    - Todos fazendo a chamada Api.
